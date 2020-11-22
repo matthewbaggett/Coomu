@@ -95,7 +95,10 @@
 <layer number="114" name="Badge_Outline" color="11" fill="1" visible="no" active="no"/>
 <layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
+<layer number="117" name="BACKMAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="119" name="KAP_TEKEN" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="120" name="KAP_MAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
@@ -105,8 +108,10 @@
 <layer number="127" name="_tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
@@ -257,6 +262,19 @@
 <package name="PAD-1.0-2.0">
 <smd name="P$1" x="0" y="0" dx="2" dy="1" layer="1"/>
 </package>
+<package name="LED-0603-SIDEFIRE">
+<smd name="P$1" x="0.9" y="0" dx="0.7" dy="0.8" layer="1" rot="R90"/>
+<smd name="P$2" x="-0.9" y="0" dx="0.7" dy="0.8" layer="1" rot="R90"/>
+<wire x1="0.85" y1="-0.3" x2="-0.85" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="-0.85" y1="-0.3" x2="-0.85" y2="0.3" width="0.127" layer="21"/>
+<wire x1="-0.85" y1="0.3" x2="-0.6" y2="0.3" width="0.127" layer="21"/>
+<wire x1="-0.6" y1="0.3" x2="0.6" y2="0.3" width="0.127" layer="21"/>
+<wire x1="0.6" y1="0.3" x2="0.85" y2="0.3" width="0.127" layer="21"/>
+<wire x1="0.85" y1="0.3" x2="0.85" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="-0.6" y1="0.3" x2="-0.55" y2="0.8" width="0.127" layer="21"/>
+<wire x1="-0.55" y1="0.8" x2="0.55" y2="0.8" width="0.127" layer="21"/>
+<wire x1="0.55" y1="0.8" x2="0.6" y2="0.3" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="USB">
@@ -311,6 +329,32 @@
 <text x="-2.54" y="-4.826" size="1.778" layer="96" font="vector">&gt;VALUE</text>
 <text x="-2.54" y="3.048" size="1.778" layer="95" font="vector">&gt;NAME</text>
 <pin name="1" x="7.62" y="0" visible="off" length="middle" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+<symbol name="LED">
+<description>&lt;h3&gt;LED&lt;/h3&gt;
+                        &lt;p&gt;&lt;/p&gt;
+                    </description>
+<wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.032" y1="-0.762" x2="-3.429" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="-1.905" x2="-3.302" y2="-3.302" width="0.1524" layer="94"/>
+<text x="-3.429" y="-4.572" size="1.778" layer="95" font="vector" rot="R90">&gt;NAME</text>
+<text x="1.905" y="-4.572" size="1.778" layer="96" font="vector" rot="R90" align="top-left">&gt;VALUE</text>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="A" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.429" y="-2.159"/>
+<vertex x="-3.048" y="-1.27"/>
+<vertex x="-2.54" y="-1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.302" y="-3.302"/>
+<vertex x="-2.921" y="-2.413"/>
+<vertex x="-2.413" y="-2.921"/>
+</polygon>
 </symbol>
 </symbols>
 <devicesets>
@@ -382,6 +426,22 @@
 <device name="" package="PAD-1.0-2.0">
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LED-SIDEFIRE">
+<gates>
+<gate name="G$1" symbol="LED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0603" package="LED-0603-SIDEFIRE">
+<connects>
+<connect gate="G$1" pin="A" pad="P$2"/>
+<connect gate="G$1" pin="C" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
