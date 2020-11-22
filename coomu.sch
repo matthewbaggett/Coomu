@@ -691,39 +691,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
-<deviceset name="82Ω" prefix="R">
-<gates>
-<gate name="R$1" symbol="RESISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="-0603-C23255" package="RESISTOR_0603">
-<connects>
-<connect gate="R$1" pin="1" pad="2"/>
-<connect gate="R$1" pin="2" pad="1"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="JLCPCB_IS_BASIC" value="yes"/>
-<attribute name="LCSC_PART" value="C23255"/>
-<attribute name="VALUE" value="82Ω"/>
-</technology>
-</technologies>
-</device>
-<device name="-0805-C17841" package="RESISTOR_0805">
-<connects>
-<connect gate="R$1" pin="1" pad="2"/>
-<connect gate="R$1" pin="2" pad="1"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="JLCPCB_IS_BASIC" value="yes"/>
-<attribute name="LCSC_PART" value="C17841"/>
-<attribute name="VALUE" value="82Ω"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="150Ω" prefix="R">
 <gates>
 <gate name="R$1" symbol="RESISTOR" x="0" y="0"/>
@@ -1242,9 +1209,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="BLUE" library="coomu" deviceset="LED-SIDEFIRE" device="0603" value="LED-SIDEFIRE0603"/>
 <part name="GREEN" library="coomu" deviceset="LED-SIDEFIRE" device="0603" value="LED-SIDEFIRE0603"/>
 <part name="RED" library="coomu" deviceset="LED-SIDEFIRE" device="0603" value="LED-SIDEFIRE0603"/>
-<part name="R3" library="JLCPCB.Resistors.basic" deviceset="82Ω" device="-0603-C23255" value="82Ω"/>
-<part name="R2" library="JLCPCB.Resistors.basic" deviceset="82Ω" device="-0603-C23255" value="82Ω"/>
-<part name="R1" library="JLCPCB.Resistors.basic" deviceset="150Ω" device="-0603-C22808" value="150Ω"/>
+<part name="R3" library="JLCPCB.Resistors.basic" deviceset="100Ω" device="-0402-C25076" value="100Ω"/>
+<part name="R2" library="JLCPCB.Resistors.basic" deviceset="100Ω" device="-0402-C25076" value="100Ω"/>
+<part name="R1" library="JLCPCB.Resistors.basic" deviceset="150Ω" device="-0402-C25082" value="150Ω"/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
